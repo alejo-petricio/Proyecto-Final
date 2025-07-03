@@ -1,8 +1,9 @@
 // backend/models/index.js
-const { Sequelize } = require('sequelize');
-const config = require('../config/database');
+const { Sequelize } = require("sequelize");
+const config = require("../config/database");
+const GameModel = require("./game");
 
-const env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || "development";
 const dbConfig = config[env];
 
 const sequelize = new Sequelize(
@@ -15,11 +16,14 @@ const sequelize = new Sequelize(
     dialect: dbConfig.dialect,
     logging: dbConfig.logging,
     pool: dbConfig.pool,
-    dialectOptions: dbConfig.dialectOptions
+    dialectOptions: dbConfig.dialectOptions,
   }
 );
 
+const Game = GameModel(sequelize, Sequelize.DataTypes);
+
 module.exports = {
   sequelize,
-  Sequelize
+  Sequelize,
+  Game,
 };
