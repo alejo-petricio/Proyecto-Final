@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 .juego-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -5,36 +6,47 @@
 }
 
 .card-container {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 2px solid #00ffff;
+  border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
 }
 
 .card-container h3 {
-  margin-top: 0;
-  color: #333;
+  color: #00ffff;
 }
 
 .card-container p {
-  margin: 0.3rem 0;
+  color: #ccc;
+  font-size: 12px;
 }
 
 .card-container label {
-  display: block;
-  margin-top: 0.8rem;
-  font-weight: bold;
+  color: #ff00ff;
+  font-size: 12px;
 }
 
 .card-container select,
 .card-container input {
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.5rem;
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
+
+  background-color: #111;
+  color: #00ffff;
+
+  border: 2px solid #00ffff;
   border-radius: 6px;
-  border: 1px solid #aaa;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.75rem;
+
+  box-shadow: 0 0 5px #00ffff, inset 0 0 3px #00ffff;
+  outline: none;
 }
 
 .card-container button {

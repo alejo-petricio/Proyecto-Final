@@ -1,15 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 .form-container {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ffff;
+  border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+  font-family: "Press Start 2P", monospace;
+  color: #fff;
 }
 
 .form-container h1 {
   text-align: center;
-  color: #333;
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -19,28 +26,44 @@ form {
 
 form label {
   margin-top: 1rem;
-  font-weight: bold;
+  font-size: 0.75rem;
+  color: #ff00ff;
 }
 
 form input,
 form select {
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #aaa;
+  background-color: #111;
+  color: #00ffff;
+  border: 2px solid #00ffff;
   border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  box-shadow: 0 0 5px #00ffff, inset 0 0 3px #00ffff;
+  outline: none;
+  font-family: "Press Start 2P", monospace;
+}
+
+form input::placeholder {
+  color: #00ffffaa;
 }
 
 form button {
-  margin-top: 1.5rem;
-  padding: 0.7rem;
-  background-color: #007bff;
-  color: white;
+  margin-top: 2rem;
+  padding: 0.8rem;
+  background-color: #39ff14;
+  color: black;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: #32e300;
+  transform: scale(1.05);
 }
